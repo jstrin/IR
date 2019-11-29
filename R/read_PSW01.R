@@ -1,18 +1,3 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
 #' read_PSW01
 #'
 #' Function for loading the Student Enrollment History
@@ -41,7 +26,7 @@
 #' @import here
 #'
 #'
-#'
+#' @export read_PSW01
 #'
 
 
@@ -114,8 +99,8 @@ read_PSW01 <- function(file, dir=NA){
                                       "ext_deg_dt3",
                                       "admit_term", "admit_type",
                                       "admit_type_descr",
-                                      "entry_cd", "ocs_stduent",
-                                      "org_student", "class_size",
+                                      "entry_cd", "off_campus_study",
+                                      "continuous_reg", "class_size",
                                       "class_rank", "percentile",
                                       "decile_rank", "quintile_rank",
                                       "sat_verb_score",
@@ -143,7 +128,13 @@ read_PSW01 <- function(file, dir=NA){
              athlcd_two = col_character(),
              sport_one = col_character(),
              sport_two = col_character(),
-             eb_atp_cd3 = col_character()
+             eb_atp_cd3 = col_character(),
+             home_addr1 = col_character(),
+             home_addr2 = col_character(),
+             home_addr3 = col_character(),
+             home_addr4 = col_character(),
+             home_phone = col_character(),
+             home_city = col_character()
            )) %>%
     mutate(Sem = c.Sem,
            CY = c.Year)
