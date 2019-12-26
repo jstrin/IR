@@ -63,7 +63,8 @@ read_GRADyyyy <- function(file, dir=NA){
                          grad_month = "c",
                          grad_year = "n",
                          entry_year = "n",
-                         entry_month = "c"
+                         entry_month = "c",
+                         race = "c"
                        )) %>%
       mutate(dob = as.numeric(paste0("19", birth_year,  birth_month,  birth_day)),
              dual = case_when(dual==0 ~ as.character(NA),
@@ -114,7 +115,8 @@ read_GRADyyyy <- function(file, dir=NA){
                          dob = "n",
                          transfer_ets = "c",
                          grad_term = "c",
-                         entterm = "c"
+                         entterm = "c",
+                         race = "c"
 
                        )) %>%
       #    select(-starts_with("blank")) %>%
@@ -154,7 +156,8 @@ read_GRADyyyy <- function(file, dir=NA){
                           gre_quant = "n",
                           dob = "n",
                           transfer_ets = "c",
-                          grad_term = "c"
+                          grad_term = "c",
+                          race = "c"
                         )) %>%
       #   select(-starts_with("blank")) %>%
       select(-hs_class, -hs_rank)%>%

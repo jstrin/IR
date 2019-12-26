@@ -1,12 +1,12 @@
 Package: uRiUtilities
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Utility Functions for URI Institutional Researchj
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: John Stringer
+Maintainer: John Stringer <john.m.stringer@gmail.com>
+Description: A series of functions for loading legacy data 
+  and manipulating current SIS exports
+License: GPL
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

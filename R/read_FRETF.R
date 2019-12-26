@@ -75,7 +75,7 @@ read_FRETF <- function(file, dir=NA){
                             race %in% c("T") ~ "Two or more"),
            TD_any = case_when( TD %in% c("A", "S") ~ "Y",
                                TRUE ~ "N"),
-           TD_schoarship =case_when( TD %in% c( "S") ~ "Y",
+           TD_scholarship =case_when( TD %in% c( "S") ~ "Y",
                                      TRUE ~ "N"),
            centenial = case_when(centenial %in% c("C") ~ "Y",
                                  TRUE ~ "N")) %>%
