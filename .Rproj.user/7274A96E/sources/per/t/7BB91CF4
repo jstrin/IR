@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1577392085521.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "843287775",
+    "id" : "7BB91CF4",
+    "lastKnownWriteTime" : 1579906012,
+    "last_content_update" : 1579906012385,
+    "path" : "~/homebRew packages/uRiUtilities/R/read_internal_payroll2.R",
+    "project_path" : "R/read_internal_payroll2.R",
+    "properties" : {
+        "cursorPosition" : "71,33",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

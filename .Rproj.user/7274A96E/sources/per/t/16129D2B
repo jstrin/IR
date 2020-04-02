@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575047425172.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2067821504",
+    "id" : "16129D2B",
+    "lastKnownWriteTime" : 1575312077,
+    "last_content_update" : 1575312077079,
+    "path" : "~/homebRew packages/uRiUtilities/R/read_GRADyyyy.R",
+    "project_path" : "R/read_GRADyyyy.R",
+    "properties" : {
+        "cursorPosition" : "55,27",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
