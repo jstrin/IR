@@ -1,9 +1,9 @@
 {
-    "path" : "~/homebRew packages/uRiUtilities/R",
-    "sortOrder" : [
+    "path": "~/homebRew packages/uRiUtilities/R",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }
