@@ -11,7 +11,7 @@
 #'
 #' @importFrom stringr str_sub str_detect
 #' @importFrom magrittr %>%
-#' @import readr
+#' @importFrom readr read_fwf
 #' @import dplyr
 #' @import here
 #'
@@ -79,9 +79,9 @@ read_GRADyyyy <- function(file, dir=NA){
                                   entry_month %in% c("09") ~ "Fall"),
              gradCY = case_when(grad_year > 5 ~ 1900 +grad_year,
                                 TRUE ~ 2000+grad_year),
-             gradSem = case_when(grad_month %in% c("01") ~ "Spring",
-                                 grad_month %in% c("06", "07") ~ "Summer",
-                                 grad_month %in% c("09") ~ "Fall"),
+             gradSem = case_when(grad_month %in% c("01", "02") ~ "Spring",
+                                 grad_month %in% c("06", "05") ~ "Summer",
+                                 grad_month %in% c("09", "08") ~ "Fall"),
              gradAY = AY_out) %>%
       mutate(Degree1 = str_sub(grad_major1, -3),
              Degree2 = str_sub(grad_major2, -3)) %>%
@@ -127,9 +127,9 @@ read_GRADyyyy <- function(file, dir=NA){
              entryAY = case_when(str_sub(entterm, 3,4) %in% c("06", "07", "09") ~ entryCY +1,
                                  TRUE ~ entryCY),
              gradCY = as.numeric(str_sub(grad_term,1,2))+ 2000,
-             gradSem = case_when(str_sub(grad_term,3,4) %in% c("01") ~ "Spring",
-                                 str_sub(grad_term,3,4) %in% c("06", "07") ~ "Summer",
-                                 str_sub(grad_term,3,4) %in% c("09") ~ "Fall"),
+             gradSem = case_when(str_sub(grad_term,3,4) %in% c("01", "02") ~ "Spring",
+                                 str_sub(grad_term,3,4) %in% c("06", "05") ~ "Summer",
+                                 str_sub(grad_term,3,4) %in% c("09", "08") ~ "Fall"),
              gradAY = AY_out) %>%
       mutate(Bachelors = case_when(degree_level == "05" ~ "Bach"),
              Masters = case_when(degree_level == "07" ~ "Masters"),
@@ -167,9 +167,9 @@ read_GRADyyyy <- function(file, dir=NA){
              entryAY = case_when(str_sub(entterm, 3,4) %in% c("06", "07", "09") ~ entryCY +1,
                                  TRUE ~ entryCY),
              gradCY = as.numeric(str_sub(grad_term,1,2))+ 2000,
-             gradSem = case_when(str_sub(grad_term,3,4) %in% c("01") ~ "Spring",
-                                 str_sub(grad_term,3,4) %in% c("06", "07") ~ "Summer",
-                                 str_sub(grad_term,3,4) %in% c("09") ~ "Fall"),
+             gradSem = case_when(str_sub(grad_term,3,4) %in% c("01", "02") ~ "Spring",
+                                 str_sub(grad_term,3,4) %in% c("06", "05") ~ "Summer",
+                                 str_sub(grad_term,3,4) %in% c("09", "08") ~ "Fall"),
              gradAY = AY_out)%>%
       mutate(Bachelors = case_when(degree_level == "05" ~ "Bach"),
              Masters = case_when(degree_level == "07" ~ "Masters"),

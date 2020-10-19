@@ -4,13 +4,13 @@
 #' please see this \href{https://www.perceptualedge.com/articles/guests/intro_to_cycle_plots.pdf}{article} in
 #' Stephen Few's Perceptual Edge library.
 #'
-#' @param dfCycle
-#' @param l.category
+#' @param dfCycle cycle data frame
+#' @param l.category list of categories
 #' @param ExitPath a character string indicating which exit path ("TOTAL", "With Masters", "Without Masters"
 #' to plot )
 #'
 #'
-#'
+#' @importFrom scales percent
 #' @importFrom magrittr "%>%"
 #' @importFrom dplyr mutate filter
 #' @import plotly
@@ -70,10 +70,11 @@ attrition_cycle_plot_int <- function(dfCycle, l.category = NULL, ExitPath = "TOT
 
   #Filter to single exit path and  create shared data
 
-  sdAttrition <- dfPlot %>%
-    filter(Path %in% ExitPath) %>%
-    crosstalk::SharedData$new(., ~Cohort.Year, group = "Entering Cohort")
-
+   sdAttrition <- dfPlot
+  #%>%
+  #   filter(Path %in% ExitPath) %>%
+  #   crosstalk::SharedData$new(., ~Cohort.Year, group = "Entering Cohort")
+  #
 
 
 

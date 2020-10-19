@@ -32,8 +32,9 @@
 
 
 read_PSW01 <- function(file, dir=NA){
+  online = "traditional"
   if(is.na(dir)){
-    file.dir <- here::here(file)
+    file.dir <- paste(sharepoint_dir("Data/Raw/Student Workfiles"), file, sep ="/")
   }else{
     file.dir <- paste(dir, file, sep="/")
   }
@@ -41,7 +42,9 @@ read_PSW01 <- function(file, dir=NA){
 
   if(str_sub(file, 7,9) %in% c("SUM")){
     c.Sem <- "Summer"
+    c.Year <- str_sub(file, 10,11)
   }else{
+    c.Year <- str_sub(file, 8,9)
     if(str_sub(file, 7,7) %in% c("F")){
       c.Sem <- "Fall"
     }else{
@@ -53,7 +56,10 @@ read_PSW01 <- function(file, dir=NA){
            is the month of the extract, and dd is the day of the extract")
     }}
   }
-  c.Year <- str_sub(file, 8,9)
+  if(str_detect(file, "ONLINE")){
+    online="accelerated/online"
+  }
+
   read_fwf(file = file.dir, col_positions =
              fwf_widths(c(11,20,30,30,30,
                           8,1,1,30,1,
@@ -134,8 +140,13 @@ read_PSW01 <- function(file, dir=NA){
              home_addr3 = col_character(),
              home_addr4 = col_character(),
              home_phone = col_character(),
-             home_city = col_character()
+             home_city = col_character(),
+             eb_atp_cd2 = col_character(),
+             eb_atp_cd1 = col_character(),
+             cent = col_character(),
+             study_agreement = col_character()
            )) %>%
     mutate(Sem = c.Sem,
-           CY = c.Year)
+           CY = c.Year,
+           Semester_type = online)
 }

@@ -11,7 +11,7 @@
 #'
 #' @importFrom stringr str_sub
 #' @importFrom magrittr %>%
-#' @import readr
+#' @importFrom readr read_fwf
 #' @import dplyr
 #' @import here
 #'

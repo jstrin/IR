@@ -7,6 +7,10 @@
 attrition_cycle_plot_int(dfCycle, l.category = NULL, ExitPath = "TOTAL")
 }
 \arguments{
+\item{dfCycle}{cycle data frame}
+
+\item{l.category}{list of categories}
+
 \item{ExitPath}{a character string indicating which exit path ("TOTAL", "With Masters", "Without Masters"
 to plot )}
 }
